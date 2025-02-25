@@ -86,3 +86,20 @@ flowchart TD
     H --> E
     E -- All neighbors processed --> B
     B -- Yes --> I
+
+flowchart TD
+    A[Start at vertex 0<br>Mark as visited and add to result]
+    B[For each neighbor of current vertex<br>in order from the adjacency list]
+    C{Is neighbor visited?}
+    D[Call DFS recursively on neighbor]
+    E[Backtrack to previous vertex]
+    F[Return result list when complete]
+
+    A --> B
+    B --> C
+    C -- No --> D
+    C -- Yes --> B
+    D --> E
+    E --> B
+    B -- All neighbors processed --> F
+
