@@ -24,7 +24,7 @@ Both algorithms start at vertex `0` and traverse the graph in the order given by
 
 Graph traversal is a key operation in many algorithms.  
 - **BFS** explores the graph level by level using a queue, making it ideal for finding the shortest path in unweighted graphs.  
-- **DFS** explores as deep as possible along a branch before backtracking using recursion (or a stack), which is useful for tasks such as connectivity testing and topological sorting.
+- **DFS** explores as deep as possible along a branch before backtracking using recursion (or an explicit stack), which is useful for tasks such as connectivity testing and topological sorting.
 
 ## Algorithm Explanations
 
@@ -63,8 +63,6 @@ Graph traversal is a key operation in many algorithms.
 
 ### BFS Diagram
 
-Below is a dynamic diagram that illustrates the BFS algorithm:
-
 ```mermaid
 flowchart TD
     A[Start at vertex 0<br>Mark as visited and enqueue]
@@ -88,20 +86,3 @@ flowchart TD
     H --> E
     E -- All neighbors processed --> B
     B -- Yes --> I
-
-```mermaid
-flowchart TD
-    A[Start at vertex 0<br>Mark as visited and add to result]
-    B[For each neighbor of current vertex<br>in order from the adjacency list]
-    C{Is neighbor visited?}
-    D[Call DFS recursively on neighbor]
-    E[Backtrack to previous vertex]
-    F[Return result list when complete]
-
-    A --> B
-    B --> C
-    C -- No --> D
-    C -- Yes --> B
-    D --> E
-    E --> B
-    B -- All neighbors processed --> F
