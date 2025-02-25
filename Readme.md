@@ -60,7 +60,6 @@ Graph traversal is a key operation in many algorithms.
    - The recursion unwinds once all vertices reachable from the starting point have been visited, and the `result` list contains the DFS order.
 
 ## Dynamic Diagrams
-
 ### BFS Diagram
 
 ```mermaid
@@ -86,6 +85,8 @@ flowchart TD
     H --> E
     E -- All neighbors processed --> B
     B -- Yes --> I
+
+
 
 
 
