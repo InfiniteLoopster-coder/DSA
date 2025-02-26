@@ -1,0 +1,11 @@
+Graph Representation
+|___Adjacency Matrix
+|___Adjacency List
+
+Adjacency Matrix :- 
+A 2D list(Matrix) where the cell at row i and column j indicate the presence (and optionally the weight)
+of an edge between vertices i and j .This represent is useful for dence graph.
+
+Adjacency List :- 
+A dictionary (or list) where each key (or index) represent a vertex and maps to a list of its neightbor vertices.
+This is more memory efficent for sparse graph.
